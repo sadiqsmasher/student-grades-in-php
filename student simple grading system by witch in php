@@ -1,0 +1,42 @@
+<!-- this content is only for study purpose copyrights under jeff comunity -->
+     <form action="calculator_advance.php" method="post" >
+       <input type="number" name="subj1" placeholder="subj1">
+       <input type="number" name="subj2"  placeholder="subj2">
+       <input type="number" name="subj3" placeholder="subj3">
+       <input type="number" name="subj4" placeholder="subj4">
+
+       <input type="submit" >
+       <br>
+       <?php
+       $subj1 =$_POST['subj1'];
+       $subj2=$_POST['subj2'];
+       $subj3=$_POST['subj3'];
+       $subj4=$_POST['subj4'];
+
+//simple grading system in php by switch
+       $grades=$subj1+$subj2+$subj3+$subj4;
+       switch ($grades) {
+         case $grades>100:
+           echo "Nonnononono yeah buddy you r out of limits try again";
+           break;
+         case $grades>=80:
+           echo "A+ grade";
+           break;
+         case $grades>=60:
+           echo "B+ grade";
+           break;
+         case $grades>=50:
+            echo "c+ grade";
+            break;
+         case $grades>=40:
+            echo "F grade";
+            break;
+         case $grades<=39:
+           echo "fail";
+           break;
+         default:
+           "invalid grades ry again";
+           break;
+       }
+
+       ?>
